@@ -25,7 +25,7 @@ app.use(cors())
 app.use(cors({
     origin: [
         'https://prescripto-full-stack-frontend-345u.onrender.com', // Live Frontend
-        'https://prescripto-full-stack-admin-ltze.onrender.com',    // Live Admin
+        //'https://prescripto-full-stack-admin-ltze.onrender.com',    // Live Admin
     ],
     credentials: true
 }))
