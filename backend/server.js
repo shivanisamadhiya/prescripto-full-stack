@@ -22,7 +22,15 @@ app.use(express.json())
 app.use(cors())
 
 // api endpoints
-app.use("/api/user", userRouter)
+app.use(cors({
+    origin: [
+        'https://prescripto-full-stack-frontend-345u.onrender.com', // Live Frontend
+        'https://prescripto-full-stack-admin-ltze.onrender.com',    // Live Admin
+        'http://localhost:5173',                                   // Local Frontend
+        'http://localhost:5174'                                    // Local Admin
+    ],
+    credentials: true
+}))
 app.use("/api/admin", adminRouter)
 app.use("/api/doctor", doctorRouter)
 
